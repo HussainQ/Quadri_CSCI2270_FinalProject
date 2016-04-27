@@ -29,3 +29,29 @@ Would you like to read data from a file? (Y/N): Y
 Enter Name of File: Movies.txt
 
 Once the data is read in, you may use all the other options.
+Options 1, 3, 5 are similar. All will prompt you for the name of the movie you would like to find/delete/insert. Follow the prompts and input the reuired data.
+
+Option 4 simply calls the deleteMovie function on each element in the hash table.
+
+Option 6 Prints out the contents of the hash table. 
+Option 7 prints out the number of elements in the hash table.
+Option 8 prints the number of indexes in the hash table.
+
+To quit the program, just enter 9 at the main menu. Alternately to end the program anywhere, use ctrl +C on your keyboard to force quit.
+
+NOTE: Please enter year in 4 digit integers. All strings must be proper. Parameters for search/delete must be exact (take a look at the Movies text file to be sure). 
+
+# System requirements:
+- Linux or Windows OS with C++ compiler software.
+- Decent processor
+- > 512 MB RAM (Why not?)
+
+# Group Members:
+None
+
+Contributers: 
+[Insert Here]
+
+# Open Issues/Bugs:
+
+Option 8 tends to work correctly when the user has inserted atleast two more movies atop the data file.
