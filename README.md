@@ -7,8 +7,12 @@ The program works by running the main driver file (explained later).
 
 # How to Run:
 
-In order to run the files, you must download the .cpp, .h, and Movies.txt files. Once compiled, run the main executable file created.
-You will be met with the following:
+In order to run the files, you must download the .cpp, .h, and Movies.txt files. Make sure all these files are in the same directory.
+This guide assumes the user is using the G++ compiler. The code is written in C++11 standard, hence the following command:
+```
+g++ -std=c++11 mainDriver.cpp HashTable.cpp HashTable.h
+```
+Once compiled, an executable file will be formed. From terminal, run the executable and you will be met with the following:
 ```
 ======Main Menu======
 1. Insert Movie
