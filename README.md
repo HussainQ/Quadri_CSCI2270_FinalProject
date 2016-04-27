@@ -9,7 +9,7 @@ The program works by running the main driver file (explained later).
 
 In order to run the files, you must download the .cpp, .h, and Movies.txt files. Once compiled, run the main executable file created.
 You will be met with the following:
-
+```
 ======Main Menu======
 1. Insert Movie
 2. Read-in movies from file (replaces movies in current table)
@@ -20,14 +20,14 @@ You will be met with the following:
 7. Hash Table Size
 8. #Indexes in table
 9. Quit
-
+```
 You are recommended to run option 2 first in order to read in the file. Just enter "Y", then the name of the file (with extention) when prompted:
-
+```
 2
 WARNING: This will remove the contents of the current databse.
 Would you like to read data from a file? (Y/N): Y
 Enter Name of File: Movies.txt
-
+```
 Once the data is read in, you may use all the other options.
 Options 1, 3, 5 are similar. All will prompt you for the name of the movie you would like to find/delete/insert. Follow the prompts and input the reuired data.
 
