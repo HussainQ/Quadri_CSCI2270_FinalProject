@@ -36,19 +36,23 @@ int main(){
 
     while(selection != 9){
 
-        displayMenu();
+        displayMenu();    //Displays Menu
         getline(cin,input);
 
-        selection = atoi(input.c_str());
+        selection = atoi(input.c_str());    //Converts input to integer form for if/else-if comparisons
+
         if(selection == 1){
-            string inputMovie;
+            string inputMovie;      //Initializing variables
             string inputYear;
             int year;
+
             cout<<"Enter Title of Movie: ";
             getline(cin,inputMovie);
+
             cout<<"Index: "<<table.hashSum(inputMovie,10)<<endl;
             cout<<"Enter Year: ";
             getline(cin,inputYear);
+
             year = atoi(inputYear.c_str());
             table.insertMovie(inputMovie,year);
           }
@@ -60,11 +64,11 @@ int main(){
                   getline(cin,input);
               }
               if(input == "Y"){
-                  bool checker = false;
+                  bool checker = false;     //Initializing variable to check if file has been read or not
                   while(checker == false){
                       cout<<"Enter Name of File: ";
                       getline(cin,input);
-                      table.deleteAll();
+                      table.deleteAll();      //Coud not get it to append to current table.
                       checker = table.readFile(input);
                   }
               }

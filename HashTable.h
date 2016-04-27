@@ -6,7 +6,8 @@
 #include <fstream>
 #include <sstream>
 
-
+//Removed previous pointer, instead uses pointer created in main class file.
+//Creating element types in hashtable, used when organizing movies into table.
 struct HashElem{
     std::string title;
     int year;
@@ -14,6 +15,7 @@ struct HashElem{
     HashElem *next = NULL;
     //HashElem *previous = NULL;
     HashElem(){};
+
 
     HashElem(std::string in_title, int in_year,int in_index)
     {

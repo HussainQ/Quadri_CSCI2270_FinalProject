@@ -9,6 +9,10 @@ HashTable::HashTable(int tableSize)
     //ctor
 }
 
+//tempC is counter variable, used when function requires iteration.
+
+// two variables passed on to Function
+// hashString is the string to hash, size is the size of the array.
 int HashTable::hashSum(string hashString, int size){
     int sum = 0;
 
@@ -30,19 +34,23 @@ int HashTable::sum(string hashString){
     return sum;
 }
 
+//Inserts a movie using given title/year by the user. Duplicate names are accepted
+//Will edit out in future.
 void HashTable::insertMovie(string name,int year){
     int index = hashSum(name, 10);
     bool firstSearch = true;
 
+    //Run if hashtable is empty
     if(hashTable[index] == NULL){
         hashTable[index] = new HashElem(name, year, index);
     }
 
-    else{
+    else{   //Else, creates new index space and fills in data.
         HashElem* previous = hashTable[index];
         HashElem* tempC = hashTable[index];
         HashElem* Insert = new HashElem(name, year, index);
 
+        //Organizing into correct position
         while(tempC->next != NULL){
 
             if(name.compare(tempC->title) >= 0){
@@ -82,6 +90,7 @@ void HashTable::insertMovie(string name,int year){
     }
 }
 
+//Prints out each index of the hashTable until reaching end of table.
 void HashTable::printInventory(){
     for(int i = 0; i < 10; i++){
 
@@ -96,6 +105,9 @@ void HashTable::printInventory(){
     }
 }
 
+//Similar to insertMovie, but only works if Movie is present in the hashTable
+//Runs method similar to findMoviePlus in order to find the element, then
+//deletes the index of the movie if found, else outputs error message.
 void HashTable::deleteMovie(string name){
 
     HashElem * previous;
@@ -177,6 +189,8 @@ void HashTable::deleteMovie(string name){
     }
 }*/
 
+//Reading in given filename, reads data into HashTable
+//Runs insertMovie() on each element of the file.
 bool HashTable::readFile(string filename){
     ifstream file;
     file.open(filename.c_str());
@@ -206,7 +220,7 @@ bool HashTable::readFile(string filename){
 
     return true;
 }
-
+//Calls delete function on every element in the hashtable using a for loop.
 void HashTable::deleteAll(){
     for(int i = 0;i < 10;i++){
 
@@ -216,7 +230,7 @@ void HashTable::deleteAll(){
     }
 }
 
-
+//Checks size of hashtable by iterating tableSize, and returning it once for loop is run through.
 void HashTable::tableSize(){
     int tableSize;
 
@@ -236,6 +250,9 @@ void HashTable::tableSize(){
     return;
 }
 
+//Buggy function, but works once user inputs two or movies atop the data file
+//movieTotal counts the number of indexes in the hashtable, then runs the sum
+//function in order to add on to it, during for loop.
 void HashTable::totalInventory(){
 
     int movieTotal = 0;
