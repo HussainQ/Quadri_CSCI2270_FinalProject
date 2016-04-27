@@ -9,7 +9,7 @@ HashTable::HashTable(int tableSize)
     //ctor
 }
 
-int HashTable::hashSum(string hashString, int size){    //x is string to hash, s is size of array
+int HashTable::hashSum(string hashString, int size){
     int sum = 0;
 
     for(int i = 0; i < hashString.length(); i++){
@@ -177,7 +177,7 @@ void HashTable::deleteMovie(string name){
     }
 }*/
 
-bool HashTable::readFileIntoTable(string filename){
+bool HashTable::readFile(string filename){
     ifstream file;
     file.open(filename.c_str());
 
@@ -256,6 +256,8 @@ void HashTable::totalInventory(){
     cout<<"Total Indexes in table: "<<movieTotal<<endl;
 }
 
+//Following function uses hashsum in order to search for movies, rather than
+//traversing the entire table.
 void HashTable::findMoviePlus(string name){
 
     int index = hashSum(name, 10);

@@ -65,7 +65,7 @@ int main(){
                       cout<<"Enter Name of File: ";
                       getline(cin,input);
                       table.deleteAll();
-                      checker = table.readFileIntoTable(input);
+                      checker = table.readFile(input);
                   }
               }
           }

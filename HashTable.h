@@ -32,7 +32,7 @@ class HashTable
         HashTable(int);
         ~HashTable();
 
-        bool readFileIntoTable(std::string);
+        bool readFile(std::string);
         void deleteAll();
         void tableSize();
         void totalInventory();
