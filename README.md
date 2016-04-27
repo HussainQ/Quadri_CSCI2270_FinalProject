@@ -53,7 +53,7 @@ NOTE: Please enter year in 4 digit integers. All strings must be proper. Paramet
 # Group Members:
 None
 
-Contributers: 
+# Contributors: 
 [Insert Here]
 
 # Open Issues/Bugs:
